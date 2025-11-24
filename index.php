@@ -14,6 +14,9 @@ require_once 'includes/login_view.inc.php';
     <title>Log in System</title>
 </head>
 <body>
+    <?php
+    output_username();
+    ?>
     <h3>Login</h3>
 
     <form action="includes/login.inc.php" method="post">
@@ -27,6 +30,8 @@ require_once 'includes/login_view.inc.php';
     check_login_errors();
     ?>
 
+    <?php
+    if(!is_loggedin()){?>
     <h3>Sign Up</h3>
 
     <form action="includes/signup.inc.php" method="post">
@@ -39,10 +44,21 @@ require_once 'includes/login_view.inc.php';
 
 
     </form>
+    <?php } ?>
+
+
+
 
     <?php
     check_signup_errors();
     ?>
+
+    <h3>Log out</h3>
+
+     <form action="includes/logout.inc.php" method="post">
+        <button>Logout</button>
+
+    </form>
     
 </body>
 </html>
