@@ -46,6 +46,15 @@ button:hover {
 p{
 
     text-align: center;
-
+    font-size: 25px;
     
+}
+.success{
+    color:green;
+}
+.fail{
+    color:red;
+}
+.success span{
+    color:chartreuse;
 }

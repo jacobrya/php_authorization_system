@@ -17,11 +17,11 @@ return false;
 function output_username(){
     
     if(isset($_SESSION["user_id"])){
-        echo "<p>" . "You are logged in as " . htmlspecialchars($_SESSION["user_username"]) . "</p>";
+        echo "<p class='success'>" . "You are logged in as " . "<span>" . htmlspecialchars($_SESSION["user_username"]) . "</span>" . "</p>";
         
     }
     else{
-        echo "<p>" . "you're not logged in" . "</p>". "<br>";
+        echo "<p class='fail'>" . "you're not logged in" . "</p>". "<br>";
     }
 }
 function check_login_errors(){
@@ -41,7 +41,7 @@ function check_login_errors(){
     }
     else if(isset($_GET["login"]) && $_GET['login'] == 'success'){
 
-        echo "<p>" . "LOGIN SUSSCESS" . "</p>";
+        echo "<p class='success'>" . "LOGIN SUSSCESS" . "</p>";
 
     }
 }

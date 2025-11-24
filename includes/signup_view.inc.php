@@ -38,7 +38,7 @@ function check_signup_errors(){
 
         echo "<br>";
 
-        echo "<p>" . "SIGNUP SUSSCESS" . "</p>";
+        echo "<p class='success'>" . "SIGNUP SUSSCESS" . "</p>";
 
 
 
